@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakerz Bite - Where smiles are served daily</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+<body>
+    <div class="top-bar py-1 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-clock me-1 text-warning"></i> Mon-Sun: 7:00 AM - 9:00 PM &nbsp;|&nbsp;
+                <i class="fas fa-phone me-1 text-warning"></i> 0302-0253728
+            </div>
+            <div>
+                <a href="#contact" class="text-white text-decoration-none me-3"><i class="fas fa-envelope me-1"></i> Order Query</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#sitemapModal" class="text-warning text-decoration-none"><i class="fas fa-sitemap me-1"></i> Sitemap</a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=150&q=80" alt="Bakerz Bite Logo" class="logo-img me-2" onerror="this.src='https://placehold.co/100x100/8B4513/FFFFFF?text=BB'">
+                <div>
+                    <span class="fw-bold h4 mb-0 d-block text-dark font-heading">Bakerz Bite</span>
+                    <span class="motto-font small d-block" style="margin-top: -6px;">Where smiles are served daily</span>
+                </div>
+            </a>
+            <div class="d-flex align-items-center order-lg-last ms-auto">
+                <div class="visitor-badge d-flex align-items-center">
+                    <i class="fas fa-users me-2"></i>
+                    <span>Visitors: <strong id="visitorCount"></strong></span>
+                </div>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#merchandise">Merchandise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="p-0">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-overlay">
+                        <div class="container">
+                            <h1 class="display-3 fw-bold mb-3">Freshly Baked Every Morning</h1>
+                            <p class="lead mb-4">Discover our signature artisan pastries made with 100% real butter & cream.</p>
+                            <a href="#products" class="btn btn-custom btn-lg">Explore Menu <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-overlay">
+                        <div class="container">
+                            <h1 class="display-3 fw-bold mb-3">Gourmet Custom Cakes</h1>
+                            <p class="lead mb-4">Handcrafted perfection for birthdays, weddings, and every sweet celebration.</p>
+                            <a href="#products" class="btn btn-custom btn-lg">View Custom Cakes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1559598467-f8b76c8155d0?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-overlay">
+                        <div class="container">
+                            <h1 class="display-3 fw-bold mb-3">Handcrafted Beverages & Treats</h1>
+                            <p class="lead mb-4">Pair your favorite pastry with our rich espresso and organic coffees.</p>
+                            <a href="#offers" class="btn btn-custom btn-lg">Special Offers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <section id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Our Fresh Bakery Menu</h2>
+                <p class="text-muted">Choose from over 300 daily freshly baked delicacies</p>
+            </div>
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-8 mb-3 mb-md-0">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start" id="filter-buttons">
+                        <button class="btn btn-outline-custom active" data-filter="all">All Items</button>
+                        <button class="btn btn-outline-custom" data-filter="Cakes">Cakes</button>
+                        <button class="btn btn-outline-custom" data-filter="Pastries">Pastries</button>
+                        <button class="btn btn-outline-custom" data-filter="Cookies">Cookies</button>
+                        <button class="btn btn-outline-custom" data-filter="Pies">Pies</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="fas fa-search text-muted"></i></span>
+                        <input type="text" id="productSearch" class="form-control border-start-0" placeholder="Search delicacies...">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4" id="productGrid">
+            </div>
+        </div>
+    </section>
+    <section id="merchandise" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Bakerz Bite Merchandise</h2>
+                <p class="text-muted">Bring home our exclusive branded collectibles</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="product-card text-center p-3">
+                        <div class="product-img-wrapper rounded">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Ceramic Mug" onerror="this.src='https://placehold.co/400x300/8B4513/FFFFFF?text=Mug'">
+                        </div>
+                        <h5 class="fw-bold mt-3 fs-6">Signature Ceramic Mug</h5>
+                        <p class="text-muted small">350ml Matte Finish</p>
+                        <div class="price-tag mb-2">$14.99</div>
+                        <button class="btn btn-sm btn-outline-custom w-100 view-merch-btn" data-id="m1">Details</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card text-center p-3">
+                        <div class="product-img-wrapper rounded">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Canvas Tote Bag" onerror="this.src='https://placehold.co/400x300/8B4513/FFFFFF?text=Tote+Bag'">
+                        </div>
+                        <h5 class="fw-bold mt-3 fs-6">Eco-Friendly Tote Bag</h5>
+                        <p class="text-muted small">100% Organic Cotton</p>
+                        <div class="price-tag mb-2">$18.50</div>
+                        <button class="btn btn-sm btn-outline-custom w-100 view-merch-btn" data-id="m2">Details</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card text-center p-3">
+                        <div class="product-img-wrapper rounded">
+                            <img src="https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=600&q=80" alt="Glass Tumbler" onerror="this.src='https://placehold.co/400x300/8B4513/FFFFFF?text=Tumbler'">
+                        </div>
+                        <h5 class="fw-bold mt-3 fs-6">Iced Coffee Tumbler</h5>
+                        <p class="text-muted small">Double-walled Glass & Straw</p>
+                        <div class="price-tag mb-2">$16.00</div>
+                        <button class="btn btn-sm btn-outline-custom w-100 view-merch-btn" data-id="m3">Details</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card text-center p-3">
+                        <div class="product-img-wrapper rounded">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Wooden Serving Tray" onerror="this.src='https://placehold.co/400x300/8B4513/FFFFFF?text=Tray'">
+                        </div>
+                        <h5 class="fw-bold mt-3 fs-6">Handcrafted Wooden Tray</h5>
+                        <p class="text-muted small">Solid Acacia Wood</p>
+                        <div class="price-tag mb-2">$29.99</div>
+                        <button class="btn btn-sm btn-outline-custom w-100 view-merch-btn" data-id="m4">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="offers">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Current Store Offers & Deals</h2>
+                <p class="text-muted">Save more on your daily sugar fix!</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="offer-card h-100">
+                        <span class="offer-badge">EVENING SPECIAL</span>
+                        <div class="my-3 text-warning display-5"><i class="fas fa-moon"></i></div>
+                        <h4 class="fw-bold">Buy 1 Get 1 Free</h4>
+                        <p class="text-muted">Available on all fresh artisan pastries daily after 8:00 PM until closing.</p>
+                        <small class="text-secondary"><i class="fas fa-info-circle me-1"></i> In-store pickup only</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-card h-100">
+                        <span class="offer-badge">15% OFF</span>
+                        <div class="my-3 text-warning display-5"><i class="fas fa-box-open"></i></div>
+                        <h4 class="fw-bold">Weekend Family Combo</h4>
+                        <p class="text-muted">Get 15% discount when you order 1 Large Cake + Box of 6 Assorted Cupcakes.</p>
+                        <small class="text-secondary"><i class="fas fa-tag me-1"></i> Use Code: BAKER15</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-card h-100">
+                        <span class="offer-badge">FREE DRINK</span>
+                        <div class="my-3 text-warning display-5"><i class="fas fa-mug-hot"></i></div>
+                        <h4 class="fw-bold">Morning Coffee Deal</h4>
+                        <p class="text-muted">Complimentary Cappuccino or Espresso with any Gourmet Sandwich or Pie purchase before 10 AM.</p>
+                        <small class="text-secondary"><i class="fas fa-clock me-1"></i> Weekdays 7AM - 10AM</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Photo Gallery</h2>
+                <p class="text-muted">A sneak peek into our kitchen, creations, and store ambiance</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80', 'Baking Fresh Artisan Bread')">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Artisan Bread" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1200&q=80', 'Gourmet Chocolate Cake Decoration')">
+                        <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=600&q=80" alt="Cake Decorating" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=80', 'Warm & Cozy Bakery Interior')">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Bakery Interior" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80', 'Handmade Fruit Tarts')">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" alt="Fruit Tarts" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=1200&q=80', 'Barista Crafting Fresh Coffee')">
+                        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=600&q=80" alt="Barista Coffee" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1200&q=80', 'Fresh Macarons Palette')">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Macarons" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=Gallery'">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Customer Feedback & Reviews</h2>
+                <p class="text-muted">We love hearing about your experience with us!</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm p-4">
+                        <h4 class="fw-bold mb-3">Leave a Review</h4>
+                        <form id="feedbackForm">
+                            <div class="mb-3">
+                                <label class="form-label font-weight-bold">Your Rating</label>
+                                <div class="rating-stars" id="starRating">
+                                    <i class="fas fa-star active" data-rating="1"></i>
+                                    <i class="fas fa-star active" data-rating="2"></i>
+                                    <i class="fas fa-star active" data-rating="3"></i>
+                                    <i class="fas fa-star active" data-rating="4"></i>
+                                    <i class="fas fa-star active" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="selectedRating" value="5">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="userName" required placeholder="John Doe">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="userEmail" required placeholder="john@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="userComment" class="form-label">Your Experience / Feedback</label>
+                                <textarea class="form-control" id="userComment" rows="4" required placeholder="Tell us about the taste, service, or atmosphere..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="fw-bold mb-3">What Others Are Saying</h4>
+                    <div id="reviewsList" style="max-height: 480px; overflow-y: auto; padding-right: 10px;">
+                        <div class="review-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <h6 class="fw-bold mb-0">Sophia Martinez</h6>
+                                <div class="text-warning small">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted d-block mb-2">2 days ago</small>
+                            <p class="mb-0 text-secondary">"The Tiramisu cake was absolute perfection! Fluffy, authentic espresso flavor, and not overly sweet. Will definitely order again!"</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <h6 class="fw-bold mb-0">David Miller</h6>
+                                <div class="text-warning small">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted d-block mb-2">5 days ago</small>
+                            <p class="mb-0 text-secondary">"Love their morning butter croissants! Perfectly flaky and warm. Friendly staff every morning."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="About Bakerz Bite" class="img-fluid rounded-4 shadow" onerror="this.src='https://placehold.co/600x400/8B4513/FFFFFF?text=About+Us'">
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-uppercase text-warning fw-bold small tracking-wider">Our Story & Promise</span>
+                    <h2 class="display-6 fw-bold mb-3">Passionate Baking Since Launch</h2>
+                    <p class="text-muted">Since its launch, <strong>Bakerz Bite</strong> has developed into a reputable bakery & café specializing in baked goods, passionately made from the finest ingredients.</p>
+                    <p class="text-muted">We offer more than 300 different kinds of baked goods, including artisan pastries, gourmet cakes, handcrafted desserts, and warm beverages.</p>
+                    <div class="p-3 bg-white rounded-3 border-start border-4 border-warning my-4">
+                        <p class="fst-italic mb-0 text-dark">
+                            "We believe in delivering premium quality products. We only use real butter, cream, and unbleached flour. We treat our customers as family and will not use any ingredient we wouldn't feed ours."
+                        </p>
+                    </div>
+                    <div class="row text-center g-3">
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary mb-0">300+</h3>
+                            <small class="text-muted">Baked Items</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary mb-0">100%</h3>
+                            <small class="text-muted">Real Butter</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary mb-0">Daily</h3>
+                            <small class="text-muted">Fresh Batch</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Frequently Asked Questions</h2>
+                <p class="text-muted">Find quick answers to common queries</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Do you offer custom cake design for birthdays or weddings?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Yes! We specialize in custom artisanal cakes. Please place your custom cake orders at least 48 to 72 hours in advance by contacting us via phone or online inquiry form.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Are there gluten-free or vegan options available?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Absolutely. We bake daily gluten-free pastries, vegan almond cookies, and sugar-free dessert options labeled clearly in our display menu.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What are your store hours and delivery policies?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    We are open daily from 7:00 AM to 9:00 PM. Local door delivery is available within a 10-mile radius for orders over $25.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do you maintain quality and freshness?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    All items are baked fresh in-house every morning using pure butter, fresh cream, and unbleached natural flour without artificial preservatives.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fw-bold">Get In Touch</h2>
+                <p class="text-muted">Visit our café or drop us a message anytime</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <h4 class="fw-bold mb-4">Contact Information</h4>
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-warning fs-4"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Our Location</h6>
+                                <p class="text-muted mb-0">124 Bakery Street, Sweetland District, CA 90210</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-warning fs-4"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone Number</h6>
+                                <p class="text-muted mb-0">+1 (555) 825-3792 / +1 (555) 825-3793</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-warning fs-4"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email Address</h6>
+                                <p class="text-muted mb-0">info@bakerzbite.com / orders@bakerzbite.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3 text-warning fs-4"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Opening Hours</h6>
+                                <p class="text-muted mb-0">Monday - Sunday: 7:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm p-4 h-100">
+                        <h4 class="fw-bold mb-3">Send Us a Message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" required placeholder="Your full name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required placeholder="Your email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" required placeholder="Order inquiry / Event catering / Feedback">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="4" required placeholder="Write your message here..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="font-heading text-white mb-2">Bakerz Bite</h4>
+                    <p class="motto-font fs-5 text-warning">Where smiles are served daily</p>
+                    <p class="small text-muted">Dedicated to bringing you 100% fresh, natural baked goods with real butter, pure cream, and natural ingredients.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#home">Home</a></li>
+                        <li class="mb-2"><a href="#products">Products</a></li>
+                        <li class="mb-2"><a href="#merchandise">Merchandise</a></li>
+                        <li class="mb-2"><a href="#offers">Special Offers</a></li>
+                        <li class="mb-2"><a href="#gallery">Photo Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Support & Info</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#about">About Us</a></li>
+                        <li class="mb-2"><a href="#faq">FAQ</a></li>
+                        <li class="mb-2"><a href="#feedback">Feedback</a></li>
+                        <li class="mb-2"><a href="#contact">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#sitemapModal">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <p class="small">Subscribe to receive sweet deals & fresh morning updates!</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-warning" type="button" onclick="showToast('Subscribed to newsletter successfully!')">Subscribe</button>
+                    </div>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small">
+                &copy; <span id="currentYear"></span> Bakerz Bite Bakery & Café. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <div class="ticker-container">
+        <div class="ticker-content" id="liveTicker">
+            <i class="fas fa-clock me-1"></i> <span id="tickerTime">Loading Live Date & Time...</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fas fa-map-marker-alt me-1"></i> <span id="tickerLocation">Detecting HTML5 Geolocation Location...</span> &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fas fa-bullhorn me-1"></i> Welcome to Bakerz Bite - Where smiles are served daily!
+        </div>
+    </div>
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-heading fw-bold" id="modalTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img id="modalImg" src="" alt="Product" class="img-fluid rounded-3 shadow-sm w-100" style="max-height: 320px; object-fit: cover;" onerror="this.src='https://placehold.co/500x400/8B4513/FFFFFF?text=Product'">
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-warning text-dark mb-2" id="modalCategory">Category</span>
+                            <h3 class="fw-bold mb-2" id="modalName">Item Name</h3>
+                            <div class="price-tag mb-3" id="modalPrice">$0.00</div>
+                            <p class="text-muted" id="modalDesc">Detailed description goes here...</p>
+                            <h6 class="fw-bold mt-3"><i class="fas fa-list-ul text-warning me-2"></i>Ingredients:</h6>
+                            <p class="small text-secondary" id="modalIngredients">List of natural ingredients...</p>
+                            <div class="mt-4 pt-2 border-top d-flex gap-2">
+                                <button class="btn btn-custom flex-grow-1" onclick="showToast('Item added to quick order list!')"><i class="fas fa-shopping-basket me-2"></i>Order Now</button>
+                                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal"></button>
+                    <img id="lightboxImg" src="" class="img-fluid rounded shadow-lg" alt="Enlarged view">
+                    <div id="lightboxCaption" class="text-white mt-2 font-heading fs-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sitemapModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-heading"><i class="fas fa-sitemap me-2"></i>Website Sitemap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#home" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Home</a></li>
+                        <li class="list-group-item"><a href="#products" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Products & Menu</a>
+                            <ul class="small text-muted">
+                                <li>Cakes</li>
+                                <li>Pastries</li>
+                                <li>Cookies</li>
+                                <li>Pies & Savories</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><a href="#merchandise" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Merchandise</a></li>
+                        <li class="list-group-item"><a href="#offers" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Special Offers</a></li>
+                        <li class="list-group-item"><a href="#gallery" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Photo Gallery</a></li>
+                        <li class="list-group-item"><a href="#feedback" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Feedback & Reviews</a></li>
+                        <li class="list-group-item"><a href="#about" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>About Us</a></li>
+                        <li class="list-group-item"><a href="#faq" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>FAQ</a></li>
+                        <li class="list-group-item"><a href="#contact" data-bs-dismiss="modal" class="text-dark fw-bold"><i class="fas fa-angle-right me-2 text-warning"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="bottom: 50px !important;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">
+                    Action executed successfully!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+<button id="scrollTopBtn" title="Go to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+</body>
+</html>
